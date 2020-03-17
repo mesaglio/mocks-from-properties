@@ -2,7 +2,7 @@
     "name": "configure-mocks",
     "version": "1.0.0",
     "description": "Mocks por archivo de configuracion, obtiene los datos de certant-mockaroo",
-    "main": "simpleExample.js",
+    "main": "getResponses.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
