@@ -1,0 +1,72 @@
+swagger: "2.0"
+host: "localhost"
+info:
+  version: 1.0.0
+  title: Test-Mock-Service
+basePath: "/"
+schemes:
+- "https"
+- "http"
+paths:
+  /personas:
+    x-swagger-router-controller: personas-controller
+    get:
+      tags:
+      - Personas
+      operationId: "obtenerPersonas"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Persona'
+  /alumnos:
+    x-swagger-router-controller: alumnos-controller
+    get:
+      tags:
+      - Alumnos
+      operationId: "obtenerAlumnos"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+        - in: query
+          name: "id"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Alumno'
+definitions:
+  Persona:
+    type: object
+    properties:
+      nombre:
+        type: string
+      apellido:
+        type: string
+      documento:
+        type: string
+      mail:
+        type: string
+  Alumno:
+    type: object
+    properties:
+      nombre:
+        type: string
+      apellido:
+        type: string
+      legajo:
+        type: string
+      mail:
+        type: string
