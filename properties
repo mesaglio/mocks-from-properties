@@ -1,0 +1,25 @@
+[models]
+all=["person","alumno"]
+person.props = ["nombre","apellido","documento","mailAsociado"]
+person.props.type = ["nombre","apellido","dni","mail"]
+alumno.props = ["nombre","apellido","legajo","mail"]
+alumno.props.type = ["nombre","apellido","dni","mail"]
+
+
+[responses]
+all=["getUser","getPerson"]
+
+[getPerson]
+code=200
+count=2
+model="person"
+#code=400
+#error-message="No tiene personas"
+
+[getUser]
+ids=["certant","comafi"]
+certant.code=200
+certant.count=2
+certant.model="person"
+comafi.code=400
+comafi.error-message="No tiene personas"
