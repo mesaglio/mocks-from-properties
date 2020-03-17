@@ -1,0 +1,15 @@
+{
+    "name": "configure-mocks",
+    "version": "1.0.0",
+    "description": "Mocks por archivo de configuracion, obtiene los datos de certant-mockaroo",
+    "main": "simpleExample.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "properties-reader": "^1.0.0",
+        "request-promise": "^4.2.5"
+    }
+}
